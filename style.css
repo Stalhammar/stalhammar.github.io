@@ -15,7 +15,9 @@ body {
 
 /*  NavBar */
 nav {
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0);
+  position: sticky;
+  top: 0;
 }
 
 nav ul {
@@ -52,7 +54,7 @@ nav a:hover {
   background: linear-gradient(90deg, green, yellow);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 5rem;
+  font-size: 10rem;
   font-weight: 900;
 }
 
@@ -63,31 +65,47 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   margin-top: 10rem;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .journey-section h2 {
   color: #000000;
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .journey-section h3 {
-  color: #565656;
+  background: linear-gradient(90deg, green, yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 2rem;
   font-weight: 400;
 }
 
 .journey-section p {
-  color: #767676;
-  line-height: 1.5;
+  color: #333333;
+  line-height: 1.75;
 }
 
 .card {
-  background-color: #d6d6d6;
+  background: #f9f9f9;
+  flex: 0 0 auto;
   color: lightgray;
   width: 40rem;
   padding: 20px;
   border-radius: 28px;
+  margin-top: 6rem;
   margin-bottom: 4rem;
+  box-shadow: 0 4px 12px rgb(0, 0, 0, 0.1);
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 2.5rem;
+  overflow-x: auto;
+  padding: 2rem;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
 }
