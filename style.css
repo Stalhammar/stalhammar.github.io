@@ -1,9 +1,19 @@
+/*  Html */
+html {
+  scroll-behavior: smooth;
+}
+
+/*  Body */
 body {
-  font-family: sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   margin: 0;
   padding: 0;
 }
 
+/*  NavBar */
 nav {
   background-color: #ffffff;
 }
@@ -26,4 +36,58 @@ nav a {
 nav a:hover {
   color: green;
   transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rem;
+  background-color: #ffffff;
+}
+
+.hero-section h1 {
+  background: linear-gradient(90deg, green, yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 5rem;
+  font-weight: 900;
+}
+
+/* Journey Section */
+.journey-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rem;
+  background-color: #FFFFFF;
+}
+
+.journey-section h2 {
+  color: #000000;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.journey-section h3 {
+  color: #565656;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.journey-section p {
+  color: #767676;
+  line-height: 1.5;
+}
+
+.card {
+  background-color: #d6d6d6;
+  color: lightgray;
+  width: 40rem;
+  padding: 20px;
+  border-radius: 28px;
+  margin-bottom: 4rem;
 }
