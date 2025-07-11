@@ -1,5 +1,26 @@
 /* Root */
 :root {
+  --large-title-size: 10rem;
+  --medium-title-size: 5rem;
+  --small-title-size: 2rem;
+  --large-title-weight: 700;
+  --medium-title-weigt: 500;
+  --small-title-weight: 400;
+  --light-gradiant: radial-gradient(
+      ellipse at 30% 100%,
+      rgba(0, 220, 130, 0.9) 0%,
+      transparent 80%
+    ),
+    radial-gradient(
+      ellipse at 60% 100%,
+      rgba(0, 130, 230, 0.9) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse at 80% 100%,
+      rgba(150, 0, 220, 0.9) 0%,
+      transparent 70%
+    );
 }
 
 /*  Html */
@@ -34,12 +55,16 @@ nav ul {
 nav a {
   color: black;
   text-decoration: none;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease-in-out;
   display: inline-block;
+  margin-top: 1rem;
 }
 
 nav a:hover {
-  color: green;
+  background: var(--light-gradiant);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   transform: scale(1.1);
 }
 
@@ -49,30 +74,17 @@ nav a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 10rem;
+  margin-top: 5rem;
   background-color: #ffffff;
 }
 
 .hero-section h1 {
-  background: radial-gradient(
-      ellipse at 30% 100%,
-      rgba(0, 255, 150, 0.7) 0%,
-      transparent 70%
-    ),
-    radial-gradient(
-      ellipse at 60% 100%,
-      rgba(0, 150, 255, 0.7) 0%,
-      transparent 75%
-    ),
-    radial-gradient(
-      ellipse at 80% 100%,
-      rgba(180, 0, 255, 0.7) 0%,
-      transparent 70%
-    );
+  background: var(--light-gradiant);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 10rem;
-  font-weight: 900;
+  font-size: var(--large-title-size);
+  font-weight: var(--large-title-weight);
 }
 
 /* Journey Section */
@@ -87,30 +99,17 @@ nav a:hover {
 
 .journey-section h2 {
   color: #000000;
-  font-size: 3rem;
-  font-weight: 500;
+  font-size: var(--medium-title-size);
+  font-weight: var(--medium-title-weigt);
 }
 
 .journey-section h3 {
-  background: radial-gradient(
-      ellipse at 30% 100%,
-      rgba(0, 255, 150, 0.7) 0%,
-      transparent 70%
-    ),
-    radial-gradient(
-      ellipse at 60% 100%,
-      rgba(0, 150, 255, 0.7) 0%,
-      transparent 75%
-    ),
-    radial-gradient(
-      ellipse at 80% 100%,
-      rgba(180, 0, 255, 0.7) 0%,
-      transparent 70%
-    );
+  background: var(--light-gradiant);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 2rem;
-  font-weight: 400;
+  font-size: var(--small-title-size);
+  font-weight: var(--small-title-weight);
 }
 
 .journey-section p {
@@ -152,32 +151,6 @@ nav a:hover {
   overflow: hidden;
 }
 
-.contact-section::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 70%;
-  background: radial-gradient(
-      ellipse at 30% 100%,
-      rgba(0, 255, 150, 0.15) 0%,
-      transparent 70%
-    ),
-    radial-gradient(
-      ellipse at 60% 100%,
-      rgba(0, 150, 255, 0.1) 0%,
-      transparent 75%
-    ),
-    radial-gradient(
-      ellipse at 80% 100%,
-      rgba(180, 0, 255, 0.08) 0%,
-      transparent 70%
-    );
-  pointer-events: none;
-  z-index: 0;
-  filter: blur(10px);
-}
 .contact-section h2 {
   font-size: 3rem;
   font-weight: 500;
@@ -186,36 +159,19 @@ nav a:hover {
 }
 
 .social-section .fa {
-  font-size: 80px;
+  font-size: 125px;
   color: white;
   margin-bottom: 10rem;
   text-decoration: none;
+  transition: transform 0.2s ease-in-out;
 }
 
 .social-section .fa:hover {
-  background: radial-gradient(
-      ellipse at 30% 100%,
-      rgba(0, 255, 150, 0.7) 0%,
-      transparent 70%
-    ),
-    radial-gradient(
-      ellipse at 60% 100%,
-      rgba(0, 150, 255, 0.7) 0%,
-      transparent 75%
-    ),
-    radial-gradient(
-      ellipse at 80% 100%,
-      rgba(180, 0, 255, 0.7) 0%,
-      transparent 70%
-    );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  transform: scale(1.1);
 }
 
 .social-section {
   display: flex;
   flex-direction: row;
   gap: 5rem;
-  position: relative;
-  z-index: 1;
 }
