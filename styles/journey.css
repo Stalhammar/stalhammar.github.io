@@ -29,18 +29,20 @@
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   background: #f9f9f9;
-  color: lightgray;
+  color: #333;
   width: 20rem;
-  padding: 20px;
+  padding: 1rem;
   border-radius: 28px;
-  margin-top: 6rem;
-  margin-bottom: 4rem;
-  box-shadow: 0 4px 12px rgb(0, 0, 0, 0.1);
+  margin: 4rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .cards {
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   gap: 2.5rem;
 }
