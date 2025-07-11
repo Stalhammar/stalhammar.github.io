@@ -87,53 +87,6 @@ nav a:hover {
   font-weight: var(--large-title-weight);
 }
 
-/* Journey Section */
-.journey-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10rem;
-  background-color: #ffffff;
-}
-
-.journey-section h2 {
-  color: #000000;
-  font-size: var(--medium-title-size);
-  font-weight: var(--medium-title-weigt);
-}
-
-.journey-section h3 {
-  background: var(--light-gradiant);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: var(--small-title-size);
-  font-weight: var(--small-title-weight);
-}
-
-.journey-section p {
-  color: #333333;
-  line-height: 1.75;
-}
-
-.card {
-  background: #f9f9f9;
-  color: lightgray;
-  width: 20rem;
-  padding: 20px;
-  border-radius: 28px;
-  margin-top: 6rem;
-  margin-bottom: 4rem;
-  box-shadow: 0 4px 12px rgb(0, 0, 0, 0.1);
-}
-
-.cards {
-  display: flex;
-  flex-direction: row;
-  gap: 2.5rem;
-}
-
 /* Project Section */
 .project-section {
   background-color: white;
