@@ -1,10 +1,11 @@
 import { NavLink } from "react-router-dom";
+import { Home, Briefcase } from "lucide-react";
 
 export default function SideBar() {
   return (
     <aside
       className="
-        fixed left-6 top-6 h-[calc(100vh-3rem)] w-32
+        fixed left-6 top-6 h-[calc(100vh-3rem)] w-48
         bg-white shadow-xl rounded-2xl
         flex flex-col items-start justify-start p-6
     "
@@ -14,18 +15,18 @@ export default function SideBar() {
           to="/"
           end
           className={({ isActive }) =>
-            isActive ? "text-blue-400" : "text-black"
+            `flex flex-row items-center gap-3 ${isActive ? "text-blue-400" : "text-black"}`
           }
         >
-          Home
+          <Home size={36} /> Home
         </NavLink>
         <NavLink
           to="/experience"
           className={({ isActive }) =>
-            isActive ? "text-blue-400" : "text-black"
+            `flex flex-row items-center gap-3 ${isActive ? "text-blue-400" : "text-black"}`
           }
         >
-          Experience
+          <Briefcase size={36} /> Experience
         </NavLink>
       </nav>
     </aside>

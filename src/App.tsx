@@ -8,7 +8,7 @@ function App() {
     <Router>
       <div className="min-h-screen bg-gray-100">
         <SideBar />
-        <main className="ml-48 p-8">
+        <main className="ml-56 p-8">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/experience" element={<Experience />} />
