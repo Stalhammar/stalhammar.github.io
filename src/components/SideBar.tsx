@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import ThemeToggle from "./ThemeToggle";
 import {
   Home,
   Briefcase,
@@ -15,7 +16,7 @@ export default function SideBar() {
         peer
         group/sidebar
         fixed left-6 top-6 h-[calc(100vh-3rem)]
-        bg-white shadow-xl rounded-2xl
+        bg-white dark:bg-neutral-700 shadow-xl rounded-2xl
         flex flex-col items-start justify-start p-6
         transition-all duration-300 overflow-hidden
         w-20 hover:w-48
@@ -28,7 +29,7 @@ export default function SideBar() {
           end
           className={({ isActive }) =>
             `group/link flex flex-row items-center gap-3 ${
-              isActive ? "text-gray-400" : "text-black"
+              isActive ? "text-black dark:text-white" : "text-gray-400 dark:text-neutral-500"
             }`
           }
         >
@@ -45,7 +46,7 @@ export default function SideBar() {
           to="/experience"
           className={({ isActive }) =>
             `group/link flex flex-row items-center gap-3 ${
-              isActive ? "text-gray-400" : "text-black"
+              isActive ? "text-black dark:text-white" : "text-gray-400 dark:text-neutral-500"
             }`
           }
         >
@@ -62,7 +63,7 @@ export default function SideBar() {
           to="/skills"
           className={({ isActive }) =>
             `group/link flex flex-row items-center gap-3 ${
-              isActive ? "text-gray-400" : "text-black"
+              isActive ? "text-black dark:text-white" : "text-gray-400 dark:text-neutral-500"
             }`
           }
         >
@@ -79,7 +80,7 @@ export default function SideBar() {
           to="/education"
           className={({ isActive }) =>
             `group/link flex flex-row items-center gap-3 ${
-              isActive ? "text-gray-400" : "text-black"
+              isActive ? "text-black dark:text-white" : "text-gray-400 dark:text-neutral-500"
             }`
           }
         >
@@ -96,7 +97,7 @@ export default function SideBar() {
           to="/projects"
           className={({ isActive }) =>
             `group/link flex flex-row items-center gap-3 ${
-              isActive ? "text-gray-400" : "text-black"
+              isActive ? "text-black dark:text-white" : "text-gray-400 dark:text-neutral-500"
             }`
           }
         >
@@ -113,7 +114,7 @@ export default function SideBar() {
           to="/contact"
           className={({ isActive }) =>
             `group/link flex flex-row items-center gap-3 ${
-              isActive ? "text-gray-400" : "text-black"
+              isActive ? "text-black dark:text-white" : "text-gray-400 dark:text-neutral-500"
             }`
           }
         >
@@ -125,6 +126,9 @@ export default function SideBar() {
             Contact Me
           </span>
         </NavLink>
+        <div className="mt-1 transition-transform duration-300 hover:scale-125 origin-left">
+          <ThemeToggle />
+        </div>
       </nav>
     </aside>
   );

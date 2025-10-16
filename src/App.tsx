@@ -10,7 +10,7 @@ import Projects from "./pages/Projects";
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-100">
+      <div className="min-h-screen bg-gray-100 dark:bg-neutral-800">
         <SideBar />
         <main className="peer-hover:ml-56 ml-24 p-8 transition-all duration-300 w-full">
           <Routes>
