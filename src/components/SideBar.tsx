@@ -1,12 +1,19 @@
 import { NavLink } from "react-router-dom";
-import { Home, Briefcase } from "lucide-react";
+import {
+  Home,
+  Briefcase,
+  GraduationCap,
+  Code,
+  Rocket,
+  Mail,
+} from "lucide-react";
 
 export default function SideBar() {
   return (
     <aside
       className="
         peer
-        group 
+        group/sidebar
         fixed left-6 top-6 h-[calc(100vh-3rem)]
         bg-white shadow-xl rounded-2xl
         flex flex-col items-start justify-start p-6
@@ -15,31 +22,107 @@ export default function SideBar() {
     "
     >
       <nav className="flex flex-col gap-8 text-gray-700 font-medium">
+        {/* Home */}
         <NavLink
           to="/"
           end
           className={({ isActive }) =>
-            `flex flex-row items-center gap-3 ${
-              isActive ? "text-blue-400" : "text-black hover:text-blue-400"
+            `group/link flex flex-row items-center gap-3 ${
+              isActive ? "text-gray-400" : "text-black"
             }`
           }
         >
-          <Home size={36} />
-          <span className="opacity-0 group-hover:opacity-100 whitespace-nowrap transition-opacity duration-300">
+          <Home
+            size={36}
+            className="transition-transform duration-300 group-hover/link:scale-110 origin-left"
+          />
+          <span className="text-inherit opacity-0 group-hover/sidebar:opacity-100 whitespace-nowrap transition-all duration-300 group-hover/link:scale-110 origin-left">
             Home
           </span>
         </NavLink>
+        {/* Experience */}
         <NavLink
           to="/experience"
           className={({ isActive }) =>
-            `flex flex-row items-center gap-3 ${
-              isActive ? "text-blue-400" : "text-black hover:text-blue-400"
+            `group/link flex flex-row items-center gap-3 ${
+              isActive ? "text-gray-400" : "text-black"
             }`
           }
         >
-          <Briefcase size={36} />
-          <span className="opacity-0 group-hover:opacity-100 whitespace-nowrap transition-opacity duration-300">
+          <Briefcase
+            size={36}
+            className="transition-transform duration-300 group-hover/link:scale-110 origin-left"
+          />
+          <span className="text-inherit opacity-0 group-hover/sidebar:opacity-100 whitespace-nowrap transition-all duration-300 group-hover/link:scale-110 origin-left">
             Experience
+          </span>
+        </NavLink>
+        {/* Skills */}
+        <NavLink
+          to="/skills"
+          className={({ isActive }) =>
+            `group/link flex flex-row items-center gap-3 ${
+              isActive ? "text-gray-400" : "text-black"
+            }`
+          }
+        >
+          <Code
+            size={36}
+            className="transition-transform duration-300 group-hover/link:scale-110 origin-left"
+          />
+          <span className="text-inherit opacity-0 group-hover/sidebar:opacity-100 whitespace-nowrap transition-all duration-300 group-hover/link:scale-110 origin-left">
+            Skills
+          </span>
+        </NavLink>
+        {/* Education */}
+        <NavLink
+          to="/education"
+          className={({ isActive }) =>
+            `group/link flex flex-row items-center gap-3 ${
+              isActive ? "text-gray-400" : "text-black"
+            }`
+          }
+        >
+          <GraduationCap
+            size={36}
+            className="transition-transform duration-300 group-hover/link:scale-110 origin-left"
+          />
+          <span className="text-inherit opacity-0 group-hover/sidebar:opacity-100 whitespace-nowrap transition-all duration-300 group-hover/link:scale-110 origin-left">
+            Education
+          </span>
+        </NavLink>
+        {/* Projects */}
+        <NavLink
+          to="/projects"
+          className={({ isActive }) =>
+            `group/link flex flex-row items-center gap-3 ${
+              isActive ? "text-gray-400" : "text-black"
+            }`
+          }
+        >
+          <Rocket
+            size={36}
+            className="transition-transform duration-300 group-hover/link:scale-110 origin-left"
+          />
+          <span className="text-inherit opacity-0 group-hover/sidebar:opacity-100 whitespace-nowrap transition-all duration-300 group-hover/link:scale-110 origin-left">
+            Projects
+          </span>
+        </NavLink>
+        {/* Contact Me */}
+        <NavLink
+          to="/contact"
+          className={({ isActive }) =>
+            `group/link flex flex-row items-center gap-3 ${
+              isActive ? "text-gray-400" : "text-black"
+            }`
+          }
+        >
+          <Mail
+            size={36}
+            className="transition-transform duration-300 group-hover/link:scale-110 origin-left"
+          />
+          <span className="text-inherit opacity-0 group-hover/sidebar:opacity-100 whitespace-nowrap transition-all duration-300 group-hover/link:scale-110 origin-left">
+            Contact Me
           </span>
         </NavLink>
       </nav>
