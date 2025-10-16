@@ -8,7 +8,7 @@ function App() {
     <Router>
       <div className="min-h-screen bg-gray-100">
         <SideBar />
-        <main className="ml-56 p-8">
+        <main className="peer-hover:ml-56 ml-24 p-8 transition-all duration-300 w-full">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/experience" element={<Experience />} />
