@@ -31,7 +31,7 @@ export default function Themetoggle({ isOpen }: { isOpen?: boolean }) {
       {/* Show text if sidebar is hovered (desktop) OR open (mobile) */}
       <span
         className={`
-          whitespace-nowrap transition-opacity duration-300 text-sm dark:text-white
+          whitespace-nowrap transition-opacity duration-300 text-black text-sm dark:text-white
           ${isOpen ? "opacity-100" : "opacity-0"}
           md:opacity-0 md:group-hover/sidebar:opacity-100
         `}

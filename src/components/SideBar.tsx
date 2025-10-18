@@ -44,8 +44,11 @@ export default function SideBar() {
           group/sidebar fixed z-40
           inset-y-0 left-0 h-dvh
           bg-white dark:bg-neutral-700 shadow-xl
-          flex flex-col items-start justify-start p-6 pt-8 md:pt-8 md:pb-8
-          pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)]
+          flex flex-col items-start justify-start
+          px-6
+          py-6
+          pt-[calc(env(safe-area-inset-top)+1rem)]
+          pb-[calc(env(safe-area-inset-bottom)+1rem)]
           transition-all duration-500 overflow-y-auto overflow-x-hidden overscroll-contain
           scrollbar-none
 

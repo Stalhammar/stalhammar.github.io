@@ -13,7 +13,7 @@ function App() {
       <div className="min-h-dvh bg-gray-100 dark:bg-neutral-800 overflow-x-hidden">
         <SideBar />
         <div className="pl-0 md:pl-24 md:peer-hover:pl-56 transition-[padding] duration-300">
-          <main className="min-h-dvh p-8">
+          <main className="p-8">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/experience" element={<Experience />} />
