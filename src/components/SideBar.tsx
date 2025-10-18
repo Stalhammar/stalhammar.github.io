@@ -30,33 +30,19 @@ export default function SideBar() {
         )}
       </button>
 
-      {/* Mobile backdrop */}
-      {open && (
-        <button
-          onClick={() => setOpen(false)}
-          className="md:hidden fixed inset-0 z-30 bg-black/40"
-          aria-label="Close menu backdrop"
-        />
-      )}
       <aside
         className={`
-          peer
-          group/sidebar fixed z-40
-          inset-y-0 left-0 h-dvh
-          bg-white dark:bg-neutral-700 shadow-xl
+          peer group/sidebar fixed z-40
+          top-0 left-0 h-dvh w-full
+          md:left-6 md:top-6 md:right-auto md:bottom-auto
+          bg-white dark:bg-neutral-700 md:shadow-xl
           flex flex-col items-start justify-start
-          px-6
-          py-6
-          pt-[calc(env(safe-area-inset-top)+1rem)]
+          px-6 py-8 pt-[calc(env(safe-area-inset-top)+1rem)]
           pb-[calc(env(safe-area-inset-bottom)+1rem)]
           transition-all duration-500 overflow-y-auto overflow-x-hidden overscroll-contain
           scrollbar-none
-
-          /* mobile drawer: width + slide */
-          w-64 ${open ? "translate-x-0" : "-translate-x-full"}
-
-          /* desktop position & hover expand */
-          md:translate-x-0 md:left-6 md:top-6 md:h-[calc(100vh-3rem)]
+          ${open ? "translate-x-0" : "-translate-x-full"}
+          md:translate-x-0 md:h-[calc(100vh-3rem)]
           md:w-20 md:hover:w-48 md:rounded-2xl
         `}
       >
