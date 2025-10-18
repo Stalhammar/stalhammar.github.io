@@ -42,10 +42,12 @@ export default function SideBar() {
         className={`
           peer
           group/sidebar fixed z-40
-          top-0 left-0 h-full
+          inset-y-0 left-0 h-dvh
           bg-white dark:bg-neutral-700 shadow-xl
-          flex flex-col items-start justify-start p-6
-          transition-all duration-500 overflow-hidden
+          flex flex-col items-start justify-start p-6 pt-8 md:pt-8 md:pb-8
+          pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)]
+          transition-all duration-500 overflow-y-auto overflow-x-hidden overscroll-contain
+          scrollbar-none
 
           /* mobile drawer: width + slide */
           w-64 ${open ? "translate-x-0" : "-translate-x-full"}

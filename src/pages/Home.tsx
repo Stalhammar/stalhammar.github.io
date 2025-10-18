@@ -6,7 +6,7 @@ const handleAnimationComplete = () => {
 
 export default function Home() {
   return (
-    <div className="flex justify-center m-30">
+    <div className="flex justify-center m-30 ">
       <SplitText
         text="Welcome to my digital portfolio!"
         className="text-6xl font-headline text-black dark:text-neutral-500 "

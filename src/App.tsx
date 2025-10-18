@@ -10,9 +10,9 @@ import Projects from "./pages/Projects";
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-100 dark:bg-neutral-800 overflow-x-hidden">
+      <div className="min-h-dvh bg-gray-100 dark:bg-neutral-800 overflow-x-hidden">
         <SideBar />
-        <div className="pl-24 peer-hover:pl-56 transition-[padding] duration-300">
+        <div className="pl-0 md:pl-24 md:peer-hover:pl-56 transition-[padding] duration-300">
           <main className="min-h-dvh p-8">
             <Routes>
               <Route path="/" element={<Home />} />
