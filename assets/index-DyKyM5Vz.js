@@ -180,7 +180,8 @@ Please change the parent <Route path="${z}"> to <Route path="${z==="/"?"*":`${z}
           peer group/sidebar fixed z-40
           top-0 left-0 h-dvh w-full
           md:left-6 md:top-6 md:right-auto md:bottom-auto
-          bg-white dark:bg-neutral-700 md:shadow-xl
+          bg-gray-100 dark:bg-neutral-800 md:shadow-xl
+          md:bg-white md:dark:bg-neutral-700
           flex flex-col items-start justify-start
           px-6 py-8 pt-[calc(env(safe-area-inset-top)+1rem)]
           pb-[calc(env(safe-area-inset-bottom)+1rem)]
