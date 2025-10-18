@@ -3,7 +3,7 @@ import { Moon, Sun } from "lucide-react";
 
 const STORAGE_KEY = "theme";
 
-export default function Themetoggle() {
+export default function Themetoggle({ isOpen }: { isOpen?: boolean }) {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
@@ -24,8 +24,23 @@ export default function Themetoggle() {
     <button
       onClick={toggleTheme}
       aria-label="Toggle dark mode"
+      className="flex flex-row items-center gap-3 group/sidebar"
     >
-      {!isDark ? <Sun size={36} className="text-yellow-400" /> : <Moon size={36} className="text-purple-700"/>}
+      {isDark ? (
+        <Moon size={36} className="text-white" />
+      ) : (
+        <Sun size={36} className="text-black" />
+      )}
+      {/* Show text if sidebar is hovered (desktop) OR open (mobile) */}
+      <span
+        className={`
+          whitespace-nowrap transition-opacity duration-300 text-sm dark:text-white
+          ${isOpen ? "opacity-100" : "opacity-0"}
+          md:opacity-0 md:group-hover/sidebar:opacity-100
+        `}
+      >
+        {isDark ? "Dark Mode" : "Light Mode"}
+      </span>
     </button>
   );
 }
