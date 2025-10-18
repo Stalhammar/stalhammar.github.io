@@ -26,7 +26,7 @@ export default function SideBar() {
         {open ? (
           <X size={32} className="text-black dark:text-white" />
         ) : (
-          <Menu size={32} className="ttext-black dark:text-white" />
+          <Menu size={32} className="text-black dark:text-white" />
         )}
       </button>
 
