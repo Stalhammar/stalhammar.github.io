@@ -172,7 +172,7 @@ Please change the parent <Route path="${z}"> to <Route path="${z==="/"?"*":`${z}
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */const uE=[["path",{d:"M18 6 6 18",key:"1bl5f8"}],["path",{d:"m6 6 12 12",key:"d8bk6v"}]],rE=aa("x",uE),vy="theme";function sE({isOpen:f}){const[l,u]=J.useState(()=>localStorage.getItem(vy)==="dark"),i=()=>{const r=!l;u(r),document.documentElement.classList.toggle("dark",r),localStorage.setItem(vy,r?"dark":"light")};return ht.jsxs("button",{onClick:i,"aria-label":"Toggle dark mode",className:"flex flex-row items-center gap-3 group/sidebar",children:[l?ht.jsx(eE,{size:36,className:"text-white"}):ht.jsx(iE,{size:36,className:"text-black"}),ht.jsx("span",{className:`
-          whitespace-nowrap transition-opacity duration-300 text-sm dark:text-white
+          whitespace-nowrap transition-opacity duration-300 text-black text-sm dark:text-white
           ${f?"opacity-100":"opacity-0"}
           md:opacity-0 md:group-hover/sidebar:opacity-100
         `,children:l?"Dark Mode":"Light Mode"})]})}function fE(){const[f,l]=J.useState(!1);return ht.jsxs(ht.Fragment,{children:[ht.jsx("button",{onClick:()=>l(u=>!u),className:`md:hidden fixed top-4 left-4 z-50 grid place-items-center
@@ -181,8 +181,11 @@ Please change the parent <Route path="${z}"> to <Route path="${z==="/"?"*":`${z}
           group/sidebar fixed z-40
           inset-y-0 left-0 h-dvh
           bg-white dark:bg-neutral-700 shadow-xl
-          flex flex-col items-start justify-start p-6 pt-8 md:pt-8 md:pb-8
-          pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)]
+          flex flex-col items-start justify-start
+          px-6
+          py-6
+          pt-[calc(env(safe-area-inset-top)+1rem)]
+          pb-[calc(env(safe-area-inset-bottom)+1rem)]
           transition-all duration-500 overflow-y-auto overflow-x-hidden overscroll-contain
           scrollbar-none
 
@@ -201,4 +204,4 @@ Please change the parent <Route path="${z}"> to <Route path="${z==="/"?"*":`${z}
 
                   /* desktop: show on sidebar hover */
                   md:opacity-0 md:max-w-0 md:group-hover/sidebar:opacity-100 md:group-hover/sidebar:max-w-xs md:group-hover/sidebar:ml-1
-                `,children:i})]},u)),ht.jsx("div",{className:"mt-auto transition-transform duration-300 hover:scale-115 origin-left",children:ht.jsx(sE,{isOpen:f})})]})})]})}function cE(){return ht.jsx("div",{className:"dark:text-neutral-500",children:ht.jsx("h1",{className:"font-bold",children:"Experience"})})}function oE(){return ht.jsx("div",{className:"dark:text-neutral-500",children:ht.jsx("h1",{children:"Contact Me"})})}function hE(){return ht.jsx("div",{className:"dark:text-neutral-500",children:ht.jsx("h1",{children:"My skills"})})}function dE(){return ht.jsx("div",{className:"dark:text-neutral-500",children:ht.jsx("h1",{children:"Education"})})}function mE(){return ht.jsx("div",{className:"dark:text-neutral-500",children:ht.jsx("h1",{children:"My Projects"})})}function pE(){return ht.jsx(G2,{children:ht.jsxs("div",{className:"min-h-dvh bg-gray-100 dark:bg-neutral-800 overflow-x-hidden",children:[ht.jsx(fE,{}),ht.jsx("div",{className:"pl-0 md:pl-24 md:peer-hover:pl-56 transition-[padding] duration-300",children:ht.jsx("main",{className:"min-h-dvh p-8",children:ht.jsxs(v2,{children:[ht.jsx(Yi,{path:"/",element:ht.jsx(Hx,{})}),ht.jsx(Yi,{path:"/experience",element:ht.jsx(cE,{})}),ht.jsx(Yi,{path:"/skills",element:ht.jsx(hE,{})}),ht.jsx(Yi,{path:"/projects",element:ht.jsx(mE,{})}),ht.jsx(Yi,{path:"/education",element:ht.jsx(dE,{})}),ht.jsx(Yi,{path:"/contact",element:ht.jsx(oE,{})})]})})})]})})}Ob.createRoot(document.getElementById("root")).render(ht.jsx(J.StrictMode,{children:ht.jsx(pE,{})}));
+                `,children:i})]},u)),ht.jsx("div",{className:"mt-auto transition-transform duration-300 hover:scale-115 origin-left",children:ht.jsx(sE,{isOpen:f})})]})})]})}function cE(){return ht.jsx("div",{className:"dark:text-neutral-500",children:ht.jsx("h1",{className:"font-bold",children:"Experience"})})}function oE(){return ht.jsx("div",{className:"dark:text-neutral-500",children:ht.jsx("h1",{children:"Contact Me"})})}function hE(){return ht.jsx("div",{className:"dark:text-neutral-500",children:ht.jsx("h1",{children:"My skills"})})}function dE(){return ht.jsx("div",{className:"dark:text-neutral-500",children:ht.jsx("h1",{children:"Education"})})}function mE(){return ht.jsx("div",{className:"dark:text-neutral-500",children:ht.jsx("h1",{children:"My Projects"})})}function pE(){return ht.jsx(G2,{children:ht.jsxs("div",{className:"min-h-dvh bg-gray-100 dark:bg-neutral-800 overflow-x-hidden",children:[ht.jsx(fE,{}),ht.jsx("div",{className:"pl-0 md:pl-24 md:peer-hover:pl-56 transition-[padding] duration-300",children:ht.jsx("main",{className:"p-8",children:ht.jsxs(v2,{children:[ht.jsx(Yi,{path:"/",element:ht.jsx(Hx,{})}),ht.jsx(Yi,{path:"/experience",element:ht.jsx(cE,{})}),ht.jsx(Yi,{path:"/skills",element:ht.jsx(hE,{})}),ht.jsx(Yi,{path:"/projects",element:ht.jsx(mE,{})}),ht.jsx(Yi,{path:"/education",element:ht.jsx(dE,{})}),ht.jsx(Yi,{path:"/contact",element:ht.jsx(oE,{})})]})})})]})})}Ob.createRoot(document.getElementById("root")).render(ht.jsx(J.StrictMode,{children:ht.jsx(pE,{})}));
